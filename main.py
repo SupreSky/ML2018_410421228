@@ -1,4 +1,5 @@
 from PIL import Image
+import random
 
 width = 400
 height = 300
@@ -9,18 +10,18 @@ picEP = Image.open("images/Eprime.png")
 picK1 = Image.open("images/key1.png")
 picK2 = Image.open("images/key2.png")
 
-SEN = 1
-epoch = 25
-rate = 1e-8
+output = Image.new("L", (width, height), 0)
 
+epoch = 50
+rate = 1e-8
 
 def mseGD():
     nowEpoch = 1
-    w = [0, 0, 0]
+    w = [random.random(), random.random(), random.random()]
     while nowEpoch==1 or nowEpoch<epoch:
-        print ("epoch: ", nowEpoch)
-        for i in range(0, 400):
-            for j in range(0, 300):
+
+        for i in range(0, width):
+            for j in range(0, height):
                 a = w[0] * picK1.getpixel((i, j)) + \
                     w[1] * picK2.getpixel((i, j)) + \
                     w[2] * picI.getpixel((i, j))
@@ -28,10 +29,15 @@ def mseGD():
                 w[0] += rate * error * picK1.getpixel((i, j))
                 w[1] += rate * error * picK2.getpixel((i, j))
                 w[2] += rate * error * picE.getpixel((i, j))
-
+        print ("epoch: ", nowEpoch, "error: ", error, "\tW: ", w)
         nowEpoch += 1
-        print ("error: ", error)
 
     return w
 
-print (mseGD())
+wFound = mseGD()
+
+for i in range(0, width):
+    for j in range(0, height):
+        output.putpixel((i, j), int(round((picEP.getpixel((i, j))-wFound[0]*picK1.getpixel((i, j))-wFound[1]*picK2.getpixel((i, j)))/wFound[2])))
+
+output.save("de-Eprime.png")
