@@ -17,12 +17,12 @@
 | :-------------: |:---------------:|
 | ![alt text][ep] | ![alt text][de] |
 
-[k1]: https://github.com/SupreSky/ML2018_410421228/blob/master/images/key1.png?raw=true "picK1"
-[k2]: https://github.com/SupreSky/ML2018_410421228/blob/master/images/key2.png?raw=true "picK2"
-[i]: https://github.com/SupreSky/ML2018_410421228/blob/master/images/I.png?raw=true "picI"
-[e]: https://github.com/SupreSky/ML2018_410421228/blob/master/images/E.png?raw=true "picE"
-[ep]: https://github.com/SupreSky/ML2018_410421228/blob/master/images/Eprime.png?raw=true "picE"
-[de]: https://github.com/SupreSky/ML2018_410421228/blob/master/de-Eprime.png?raw=true "picOut"
+[k1]: https://github.com/SupreSky/ML2018_410421228/blob/master/Assignment%201/images/key1.png?raw=true "picK1"
+[k2]: https://github.com/SupreSky/ML2018_410421228/blob/master/Assignment%201/images/key2.png?raw=true "picK2"
+[i]: https://github.com/SupreSky/ML2018_410421228/blob/master/Assignment%201/images/I.png?raw=true "picI"
+[e]: https://github.com/SupreSky/ML2018_410421228/blob/master/Assignment%201/images/E.png?raw=true "picE"
+[ep]: https://github.com/SupreSky/ML2018_410421228/blob/master/Assignment%201/images/Eprime.png?raw=true "picEp"
+[de]: https://github.com/SupreSky/ML2018_410421228/blob/master/Assignment%201/de-Eprime.png?raw=true "picOut"
 
 ## 參數設定
 ```python
