@@ -12,13 +12,13 @@ picK2 = Image.open("images/key2.png")
 
 output = Image.new("L", (width, height), 0)
 
-epoch = 50
-rate = 1e-8
+epoch = 10
+rate = 1e-7
 
 def mseGD():
     nowEpoch = 1
     w = [random.random(), random.random(), random.random()]
-    while nowEpoch==1 or nowEpoch<epoch:
+    while nowEpoch==1 or nowEpoch<=epoch:
 
         for i in range(0, width):
             for j in range(0, height):
@@ -29,7 +29,7 @@ def mseGD():
                 w[0] += rate * error * picK1.getpixel((i, j))
                 w[1] += rate * error * picK2.getpixel((i, j))
                 w[2] += rate * error * picE.getpixel((i, j))
-        print ("epoch: ", nowEpoch, "error: ", error, "\tW: ", w)
+        print ("Epoch ", nowEpoch, "/", epoch, "\terror: ", error, "\tW: ", w)
         nowEpoch += 1
 
     return w
