@@ -20,3 +20,4 @@
 這次 project 在 Classifier 上選擇 SGD 和 Support Vector Machine 中的 SVC，並在 Dimension reduction 嘗試所有 svd_solver 分別是 auto、full、arpack 和 randomized。
 結果 SVC 完勝 SGD，在 4 個 svd_solver 的測試資料比較其準確率，SVC 普遍高於 SGD 8 個百分點甚至更多。
 而 4 個 svd_solver 之間的比較中，auto 的準確率最高，但與第二、第三和第四名並沒有相差太多，值得一提的是：arpack 的準確率雖然不出色，但是它的可以大幅縮短 SVC 的訓練時間。換句話說，arpack 在設定 n_components 為 32 時，訓練時間短而且最後得到的準確率仍在可接受範圍，是個不錯的 Dimension reduction 方法。
+這次實作中，Coding 部分並不困難，困難的地方在於要理解每個 Classifier 背後的數學原理與意義，讓我領悟到資工系的程式設計師不只是 Coding 要強，連數學也要有兩把刷子才有辦法結合應用層面解決更難的問題。
