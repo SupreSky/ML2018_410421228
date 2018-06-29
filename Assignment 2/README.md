@@ -11,6 +11,14 @@
 ### 表一、測試資料集的準確率
 
 * arpack 的 n_components 參數設定為 32
+-----
+
+![Alt text][pic1]
+
+[pic1]: https://github.com/SupreSky/ML2018_410421228/blob/master/Assignment%202/pics/SGD_auto.png?raw=true "Loss per Epoch"
+
+### 圖一、訓練時，每個 Epoch 的 loss，共 10 個 Epoch
+可以看到每次開始下一個 Epoch 時，loss 會從很大的數值快速收斂到低點。
 
 ## 遇到的問題
 第一次使用 Scikit-learn 套件做機器學習，感受到這是一個功能強大、內容包山包海的套件，不論是 Classification、Regression 還是 Dimensionality reduction，都可以在 Sklearn 裡面找到並且使用。但也因為它的功能之豐富，讓我在使用時花了不少時間在釐清如何調整超參數和取捨那些功能可以不需要使用哪些需要。但也因為如此，我回頭看了很多次老師的上課投影片來補足不了解的地方。
